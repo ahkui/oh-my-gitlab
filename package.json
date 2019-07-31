@@ -1,0 +1,36 @@
+{
+  "name": "@ahkui/oh-my-gitlab",
+  "version": "0.0.0",
+  "description": "Manage multiple repository in Gitlab",
+  "bin": {
+    "oh-my-gitlab": "index.js"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "scripts": {
+    "test": "npm run eslint",
+    "eslint": "eslint . --ext .js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/ahkui/oh-my-gitlab.git"
+  },
+  "keywords": [
+    "gitlab"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "gitlab": "latest",
+    "colors": "^1.3.3",
+    "lodash": "^4.17.11",
+    "yargs": "^13.2.2"
+  },
+  "devDependencies": {
+    "eslint": "latest",
+    "eslint-plugin-import": "latest",
+    "eslint-plugin-node": "latest",
+    "husky": "latest",
+    "lint-staged": "latest"
+  }
+}
