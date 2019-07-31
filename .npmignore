@@ -1,5 +1,5 @@
 .vscode
-.eslintrc.json
+.eslintrc.js
 .gitlab-ci.yml
 .huskyrc
 .lintstagedrc
