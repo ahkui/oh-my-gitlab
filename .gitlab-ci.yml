@@ -1,0 +1,23 @@
+image: node:8
+
+stages:
+  - test
+  - publish
+
+before_script: npm install
+
+test:
+  stage: test
+  script:
+    - npm run lint
+    - npm test
+
+publish:
+  stage: publish
+  only:
+    - tags
+  script:
+    - echo "//registry.npmjs.org/:_authToken=$NPM_AUTH_TOKEN" > ~/.npmrc
+    - npm publish
+
+

@@ -9,8 +9,8 @@
     "node": ">=8.0.0"
   },
   "scripts": {
-    "test": "npm run eslint",
-    "eslint": "eslint . --ext .js"
+    "lint": "eslint . --ext .js",
+    "postversion": "git push --follow-tags"
   },
   "repository": {
     "type": "git",
