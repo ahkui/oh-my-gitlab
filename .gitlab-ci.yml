@@ -4,7 +4,8 @@ stages:
   - test
   - publish
 
-before_script: npm install
+before_script:
+  - npm install
 
 test:
   stage: test
