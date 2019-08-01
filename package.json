@@ -13,9 +13,7 @@
     "start": "babel-node index.js",
     "watch": "nodemon --exec npm start",
     "transpile": "babel index.js > index.es5.js",
-    "prepack": "npm run transpile",
-    "prelink": "npm run transpile",
-    "prepublish": "npm run transpile",
+    "prepublishOnly": "npm run transpile",
     "postversion": "git push --follow-tags"
   },
   "repository": {
@@ -25,6 +23,9 @@
   "keywords": [
     "gitlab"
   ],
+  "config": {
+    "unsafe-perm": true
+  },
   "license": "MIT",
   "dependencies": {
     "gitlab": "latest"
