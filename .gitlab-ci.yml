@@ -22,7 +22,7 @@ test:
 build:
   stage: build
   script:
-    - npm build
+    - npm run build
 
 publish:
   stage: publish
