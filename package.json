@@ -12,8 +12,8 @@
     "lint": "eslint . --ext .js",
     "start": "babel-node index.js",
     "watch": "nodemon --exec npm start",
-    "transpile": "babel index.js > index.es5.js",
-    "prepublishOnly": "npm run transpile",
+    "build": "babel index.js > index.es5.js",
+    "prepublishOnly": "npm run build",
     "postversion": "git push --follow-tags"
   },
   "repository": {
@@ -23,9 +23,6 @@
   "keywords": [
     "gitlab"
   ],
-  "config": {
-    "unsafe-perm": true
-  },
   "license": "MIT",
   "dependencies": {
     "gitlab": "latest"

@@ -2,6 +2,7 @@ image: node:8
 
 stages:
   - test
+  - build
   - publish
 
 cache:
@@ -18,12 +19,18 @@ test:
     - npm run lint
     - npm test
 
+build:
+  stage: build
+  script:
+    - npm build
+
 publish:
   stage: publish
   only:
     - tags
   script:
     - echo "//registry.npmjs.org/:_authToken=$NPM_AUTH_TOKEN" > ~/.npmrc
+    - echo "unsafe-perm = true" >> ~/.npmrc
     - npm publish --access public
 
 
