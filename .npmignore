@@ -3,3 +3,4 @@
 .gitlab-ci.yml
 .huskyrc
 .lintstagedrc
+.babelrc

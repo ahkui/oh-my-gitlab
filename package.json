@@ -3,13 +3,19 @@
   "version": "0.0.0",
   "description": "Manage multiple repository in Gitlab",
   "bin": {
-    "oh-my-gitlab": "index.js"
+    "oh-my-gitlab": "oh-my-gitlab"
   },
   "engines": {
     "node": ">=8.0.0"
   },
   "scripts": {
     "lint": "eslint . --ext .js",
+    "start": "babel-node index.js",
+    "watch": "nodemon --exec npm start",
+    "transpile": "babel index.js > index.es5.js",
+    "prepack": "npm run transpile",
+    "prelink": "npm run transpile",
+    "prepublish": "npm run transpile",
     "postversion": "git push --follow-tags"
   },
   "repository": {
@@ -20,17 +26,22 @@
     "gitlab"
   ],
   "license": "MIT",
-  "dependencies": {
-    "gitlab": "latest",
-    "colors": "latest",
-    "lodash": "latest",
-    "yargs": "latest"
-  },
   "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/node": "^7.5.5",
+    "@babel/plugin-transform-runtime": "^7.5.5",
+    "@babel/polyfill": "^7.4.4",
+    "@babel/preset-env": "^7.5.5",
+    "babel-eslint": "^10.0.2",
+    "babel-plugin-console": "^0.2.1",
+    "colors": "latest",
+    "dotenv": "^8.0.0",
     "eslint": "latest",
-    "eslint-plugin-import": "latest",
-    "eslint-plugin-node": "latest",
+    "eslint-plugin-babel": "^5.3.0",
+    "gitlab": "latest",
     "husky": "latest",
-    "lint-staged": "latest"
+    "lint-staged": "latest",
+    "nodemon": "^1.19.1"
   }
 }

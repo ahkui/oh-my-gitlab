@@ -1,3 +1,7 @@
 # dependencies
 /node_modules/**
 
+*.es5.js
+*.txt
+*.md
+!README.md
