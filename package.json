@@ -26,6 +26,9 @@
     "gitlab"
   ],
   "license": "MIT",
+  "dependencies": {
+    "gitlab": "latest"
+  },
   "devDependencies": {
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
@@ -35,11 +38,8 @@
     "@babel/preset-env": "^7.5.5",
     "babel-eslint": "^10.0.2",
     "babel-plugin-console": "^0.2.1",
-    "colors": "latest",
-    "dotenv": "^8.0.0",
     "eslint": "latest",
     "eslint-plugin-babel": "^5.3.0",
-    "gitlab": "latest",
     "husky": "latest",
     "lint-staged": "latest",
     "nodemon": "^1.19.1"
