@@ -1,6 +1,6 @@
 {
   "name": "@ahkui/oh-my-gitlab",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Manage multiple repository in Gitlab",
   "bin": {
     "oh-my-gitlab": "oh-my-gitlab"
