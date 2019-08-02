@@ -68,13 +68,13 @@ let app = async () => {
 
     var isValidConfig = true;
 
-    const gitlabHost = readFileSync(realPath(`${fileName.gitlabHost}`), `utf8`).replace(`\n`, ``)
+    const gitlabHost = readFileSync(realPath(`${fileName.gitlabHost}`), `utf8`).replace(`\n`, ``).replace(`\r`, ``)
     if (gitlabHost == ``) {
         console.log(`gitlab-host.txt is empty!`);
         isValidConfig = false;
     }
 
-    const gitlabPersonalToken = readFileSync(realPath(`${fileName.gitlabPersonalToken}`), `utf8`).replace(`\n`, ``)
+    const gitlabPersonalToken = readFileSync(realPath(`${fileName.gitlabPersonalToken}`), `utf8`).replace(`\n`, ``).replace(`\r`, ``)
     if (gitlabPersonalToken == ``) {
         console.log(`${fileName.gitlabPersonalToken} is empty!`);
         isValidConfig = false;
@@ -93,19 +93,19 @@ let app = async () => {
         isValidConfig = false;
     }
 
-    const mergeRequestTitle = readFileSync(realPath(`${fileName.mergeRequestTitle}`), `utf8`).replace(`\n`, ``)
+    const mergeRequestTitle = readFileSync(realPath(`${fileName.mergeRequestTitle}`), `utf8`).replace(`\n`, ``).replace(`\r`, ``)
     if (mergeRequestTitle == ``) {
         console.log(`${fileName.mergeRequestTitle} is empty!`);
         isValidConfig = false;
     }
 
-    const sourceBranch = readFileSync(realPath(`${fileName.sourceBranch}`), `utf8`).replace(`\n`, ``)
+    const sourceBranch = readFileSync(realPath(`${fileName.sourceBranch}`), `utf8`).replace(`\n`, ``).replace(`\r`, ``)
     if (sourceBranch == ``) {
         console.log(`${fileName.sourceBranch} is empty!`);
         isValidConfig = false;
     }
 
-    const targetBranch = readFileSync(realPath(`${fileName.targetBranch}`), `utf8`).replace(`\n`, ``)
+    const targetBranch = readFileSync(realPath(`${fileName.targetBranch}`), `utf8`).replace(`\n`, ``).replace(`\r`, ``)
     if (targetBranch == ``) {
         console.log(`${fileName.targetBranch} is empty!`);
         isValidConfig = false;
